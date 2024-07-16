@@ -35,7 +35,7 @@ public class ReserveStepsDefinitions {
 
     @Given("^the user access in the platform$")
     public void theUserAccessInThePlatform() {
-        OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.booking.com/index.es.html"));
+        OnStage.theActorInTheSpotlight().wasAbleTo(Open.url("https://www.booking.com/index.es.html"));
 
     }
 

@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.questions.Text;
+import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.ClickAndHoldAction;
@@ -39,11 +40,33 @@ public class TaskEnterInformation implements Task {
         actor.attemptsTo(Enter.keyValues(Keys.ENTER).into(HomePage.InputCity));
 
 
-        actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDateInit));
-        actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDatefinal));
-        actor.attemptsTo(Click.on(HomePage.InputDateInit));
 
+
+
+
+        String DateInit="//span[@aria-label='"+Data.getDateinit()+"']";
+
+        HomePage.InputDateInit= Target.the("texto")
+                .locatedBy(DateInit);
+
+
+        String DateFinal="//span[@aria-label='"+Data.getDatefinal()+"']";
+
+
+        HomePage.InputDatefinal= Target.the("texto")
+                .locatedBy(DateFinal);
+
+
+         System.out.println(DateInit);
+         System.out.println(DateFinal);
+
+
+       actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDateInit));
+        actor.attemptsTo(Click.on(HomePage.InputDateInit));
+       actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDatefinal));
         actor.attemptsTo(Click.on(HomePage.InputDatefinal));
+
+
 
         actor.attemptsTo(WaitElement.untilAppears(HomePage.ButtonPerson));
 

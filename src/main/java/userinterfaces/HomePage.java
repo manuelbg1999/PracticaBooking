@@ -14,12 +14,12 @@ public class HomePage {
 
 
 
-    public static final Target InputDateInit=Target.the("Date init")
-            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[2]/div/div[2]/div/nav/div[2]/div/div[1]/div/div[1]/table/tbody/tr[3]/td[6]/span");
+    public static  Target InputDateInit=Target.the("Date init")
+            .locatedBy("");
 
 
-    public static final Target InputDatefinal=Target.the("Date final")
-            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[2]/div/div[2]/div/nav/div[2]/div/div[1]/div/div[1]/table/tbody/tr[4]/td[6]/span");
+    public static  Target InputDatefinal=Target.the("Date final")
+            .locatedBy("");
 
 
     public static final Target ButtonPerson=Target.the("Button Person")

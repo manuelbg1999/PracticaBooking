@@ -49,7 +49,7 @@ public class TaskEnterInformation implements Task {
 
         actor.attemptsTo(Click.on(HomePage.ButtonPerson));
 
-        ///actor.attemptsTo(WaitElement.untilAppears(HomePage.Adult));
+        actor.attemptsTo(WaitElement.untilAppears(HomePage.Adult));
 
         ///actor.attemptsTo(WaitElement.untilAppears(HomePage.Room));
 
@@ -80,7 +80,7 @@ public class TaskEnterInformation implements Task {
 
         ///le doy click en habitaciones
 
-        actor.attemptsTo(WaitElement.untilAppears(HomePage.Room));
+       actor.attemptsTo(WaitElement.untilAppears(HomePage.Room));
         actor.attemptsTo(Click.on(HomePage.Room));
 
 

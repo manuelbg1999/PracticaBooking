@@ -23,20 +23,19 @@ public class HomePage {
 
 
     public static final Target ButtonPerson=Target.the("Button Person")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/button");
-
-
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button");
+///html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/button
 
     public static final Target Room=Target.the("Button Room")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/div/div/div/div[5]/div[2]/button[2]");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/div/div/div/div[5]/div[2]/button[2]");
 
 
     public static final Target Adult=Target.the("Button Adult")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/div/div/div/div[1]/div[2]/button[2]");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/div/div/div/div[1]/div[2]/button[2]");
 
 
     public static final Target Kids=Target.the("Button Kids")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/div/div/div/div[2]/div[2]/button[2]");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/div/div/div/div[2]/div[2]/button[2]");
 
 
     public static final Target CloseButton=Target.the("Button Close")
@@ -44,20 +43,20 @@ public class HomePage {
 
 
     public static final Target Age1=Target.the("Button Age 1")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/div/div/div/div[3]/div[1]/div/select");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/div/div/div/div[3]/div/div/select");
 
 
     public static final Target Age2=Target.the("Button Age 2")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/div/div/div/div[3]/div[2]/div/select");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/div/div/div/div[3]/div[2]/div/select");
 
 
 
     public static final Target ButtonOk=Target.the("Button OK")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[3]/div/div/div/button");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/div/div/button");
 
 
     public static final Target ButtonSearch=Target.the("Button Search")
-            .locatedBy("/html/body/div[4]/div/div[2]/div/div[1]/div/form/div[1]/div[4]/button");
+            .locatedBy("/html/body/div[3]/div[2]/div/form/div[1]/div[4]/button");
 
     public static final Target ButtonFilter=Target.the("Button Filter")
             .locatedBy("/html/body/div[4]/div/div[2]/div/div[2]/div[3]/div[2]/div[2]/div[1]/div/div/span/button");

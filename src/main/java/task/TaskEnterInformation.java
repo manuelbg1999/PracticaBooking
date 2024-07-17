@@ -44,27 +44,30 @@ public class TaskEnterInformation implements Task {
 
 
 
-        String DateInit="//span[@aria-label='"+Data.getDateinit()+"']";
+      ////  String DateInit="//span[@aria-label='"+Data.getDateinit()+"']";
 
-        HomePage.InputDateInit= Target.the("texto")
-                .locatedBy(DateInit);
-
-
-        String DateFinal="//span[@aria-label='"+Data.getDatefinal()+"']";
+       ///// HomePage.InputDateInit= Target.the("texto")
+         ///       .locatedBy(DateInit);
 
 
-        HomePage.InputDatefinal= Target.the("texto")
-                .locatedBy(DateFinal);
+       ///// String DateFinal="//span[@aria-label='"+Data.getDatefinal()+"']";
 
 
-         System.out.println(DateInit);
-         System.out.println(DateFinal);
+      /////  HomePage.InputDatefinal= Target.the("texto")
+        ////        .locatedBy(DateFinal);
 
 
-       actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDateInit));
-        actor.attemptsTo(Click.on(HomePage.InputDateInit));
-       actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDatefinal));
-        actor.attemptsTo(Click.on(HomePage.InputDatefinal));
+       ////  System.out.println(DateInit);
+        //// System.out.println(DateFinal);
+
+
+       ///actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDateInit));
+        //// actor.attemptsTo(WaitElement.untilAppears(HomePage.InputDatefinal));
+
+        ///se pasan los xpath de manera dinamica
+        actor.attemptsTo(Click.on(HomePage.InputDateInit.of(Data.getDateinit())));
+
+        actor.attemptsTo(Click.on(HomePage.InputDatefinal.of(Data.getDatefinal())));
 
 
 

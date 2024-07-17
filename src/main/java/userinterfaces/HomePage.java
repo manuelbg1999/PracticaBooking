@@ -14,11 +14,11 @@ public class HomePage {
 
 
    //////Para pasar XPATH DYNAMICOS SE HACE DE ESTA FORMA
-    public static  Target InputDateInit=Target.the("{0} Date init")
+    public static final  Target InputDateInit=Target.the("{0} Date init")
             .locatedBy("//span[@aria-label='{0}']");
 
 
-    public static  Target InputDatefinal=Target.the("{0} Date final")
+    public static final Target InputDatefinal=Target.the("{0} Date final")
             .locatedBy("//span[@aria-label='{0}']");
 
 

@@ -6,3 +6,5 @@ Feature: Reserve in the booking.com
       |city|dateinit|datefinal|
       |Medellín|19 julio 2024|26 julio 2024|
     Then user look the hotel reserve in the page
+
+

@@ -39,7 +39,7 @@ public class HomePage {
 
 
     public static final Target CloseButton=Target.the("Button Close")
-            .locatedBy("#b2indexPage > div.f0fbe41bfe.b290b28eaf > div > div > div > div.a6482c8acb > div.c1d765e0d9.c62b7e9b8e.d421021d96 > div > button");
+            .locatedBy("//button[@aria-label='Ignorar información sobre el inicio de sesión.']");
 
 
     public static final Target Age1=Target.the("Button Age 1")

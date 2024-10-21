@@ -102,7 +102,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 19-07-2024 11:01</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-10-2024 15:19</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -135,9 +135,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="pending-color">
+                                <span class="error-color">
                                     User reserve in the platform
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -167,7 +167,20 @@
                                     <div class="cast-member collapse" id="castDetails">
                                         <table class="cast">
                                             <tr>
-                                                    <td width="100%">
+                                                    <td width="50%">
+                                                        <h4>
+                                                            <i class="fa fa-2x fa-user-o"></i>&nbsp;<span>Manuel</span>
+                                                            <h4>
+                                                                <p></p>
+                                                                <ul>
+                                                                        <li><strong>Manuel can:</strong>
+                                                                            <ul>
+                                                                                    <li>browse the web</li>
+                                                                            </ul>
+                                                                        </li>
+                                                                </ul>
+                                                    </td>
+                                                    <td width="50%">
                                                         <h4>
                                                             <i class="fa fa-2x fa-user-o"></i>&nbsp;<span>User</span>
                                                             <h4>
@@ -196,48 +209,9 @@
 
     <div class="clr"></div>
 
-        <div class="story-title">
-            <h3 class="story-header">Scenario Outline</h3>
-
-            <div class="scenario">Given the user access in the platform<br>When the user enter the information"&lt;city&gt;""&lt;dateinit&gt;""&lt;datefinal&gt;"<br>Then user look the hotel reserve in the page</div>
-
-        </div>
 
     <div id="beforetable"></div>
 
-
-            <h3 class="story-header">Examples:&nbsp;</h3>
-
-
-                <p class="example-tag">
-                </p>
-
-            <div class="example-table test-report">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                            <th>City</th>
-                            <th>Dateinit</th>
-                            <th>Datefinal</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="test-PENDING"><a href="#0">1</a></td>
-                                <td class="test-PENDING"><a
-                                            href="#0">Medell&iacute;n</a>
-                                </td>
-                                <td class="test-PENDING"><a
-                                            href="#0">19 julio 2024</a>
-                                </td>
-                                <td class="test-PENDING"><a
-                                            href="#0">26 julio 2024</a>
-                                </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
     <div id="tablecontents">
         <div>
@@ -246,22 +220,22 @@
                     <th width="65">                        &nbsp;
                     </th>
 
-                        <th width="%" class="step-description-column greentext">
+                        <th width="%"
+                            class="step-description-wide-column greentext">
                             Steps
                         </th>
-                        <th width="150" class="greentext">Screenshots</th>
                     <th width="130" class="greentext">Outcome</th>
                     <th width="80" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
                 </tr>
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-IGNORED">
+                <tr class="test-ERROR">
                     <td width="50" class="step-icon">
                         <a name="0"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 ignored-icon"
+                                <i class="fa fa-plus-square-o imgstepSection0 error-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -270,43 +244,6 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                Example: {city=Medellín, dateinit=19 julio 2024, datefinal=26 julio 2024}
-                            </span>
-                            </a>
-                            <span class="evidence">
-                            </span>
-                        </div>
-                    </td>
-                        <td width="160" class="IGNORED-text">
-
-                                <a href="ba1c8d28bcd95ff6f2eb05f4471efcd43fbe93fcc019ff72a54e0db05ff2e600_screenshots.html#screenshots?screenshot=3">
-                                    <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png"
-                                         href="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png"
-                                         class="screenshot"
-                                         width="48" height="48"/>
-                                </a>
-                        </td>
-                    <td width="100"><span class="top-level-step">IGNORED</span></td>
-                    <td width="100"><span class="top-level-step">10.5s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <table id="stepSection0" style="display:none; width:100%">
-
-                <tr class="test-SUCCESS">
-                    <td width="50" class="step-icon">
-                        <a name="0-0"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0-0 success-icon"
-                                   style="margin-left: 40px; float:left;  padding-right:5px"></i>
-                            </a>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
-                               style="display:block;">
-                                <span class="nested-step">
                                 Given the user access in the platform
                             </span>
                             </a>
@@ -314,27 +251,18 @@
                             </span>
                         </div>
                     </td>
-                        <td width="160" class="SUCCESS-text">
-
-                                <a href="ba1c8d28bcd95ff6f2eb05f4471efcd43fbe93fcc019ff72a54e0db05ff2e600_screenshots.html#screenshots?screenshot=3">
-                                    <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png"
-                                         href="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png"
-                                         class="screenshot"
-                                         width="48" height="48"/>
-                                </a>
-                        </td>
-                    <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">10.22s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">5.41s</span></td>
                 </tr>
                 <tr>
                     <td colspan="5">
-                        <table id="stepSection0-0" style="display:none; width:100%">
+                        <table id="stepSection0" style="display:none; width:100%">
 
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td width="50" class="step-icon">
-                        <a name="0-0-0"/>
-                            <span style="margin-left: 60px; margin-right: 5px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></span>
+                        <a name="0-0"/>
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -345,72 +273,98 @@
                             </span>
                         </div>
                     </td>
-                        <td width="160" class="SUCCESS-text">
-
-                                <a href="ba1c8d28bcd95ff6f2eb05f4471efcd43fbe93fcc019ff72a54e0db05ff2e600_screenshots.html#screenshots?screenshot=2">
-                                    <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png"
-                                         href="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png"
-                                         class="screenshot"
-                                         width="48" height="48"/>
-                                </a>
-                        </td>
-                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">9.63s</span></td>
+                    <td width="100"><span class="nested-group-step">ERROR</span></td>
+                    <td width="100"><span class="nested-group-step">4.9s</span></td>
                 </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class org.openqa.selenium.chrome.ChromeDriver</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-2""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-2">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.DriverConfigurationError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>stepdefinitions.ReserveStepsDefinitions.theUserAccessInThePlatform(ReserveStepsDefinitions.java:38)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: net.thucydides.core.webdriver.DriverConfigurationError
+                    </h4>
+                    <div>
+                            <pre>Could not instantiate new WebDriver instance of type class org.openqa.selenium.chrome.ChromeDriver (session not created: This version of ChromeDriver only supports Chrome version 126<br>Current browser version is 129.0.6668.101 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe<br>Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'<br>System info: host: 'QV-4153', ip: '192.168.1.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'<br>Driver info: driver.version: ProvideNewDriver<br>remote stacktrace: &nbsp; &nbsp; &nbsp; &nbsp;GetHandleVerifier [0x00007FF7DA28EEA2+31554]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA207ED9]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA0C872A]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA106ED2]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA106008]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA0FFCC8]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA0FBB3B]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA148794]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA147DF0]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA13CDD3]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA10A33B]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA10AED1]<br>&nbsp; &nbsp; &nbsp; &nbsp;GetHandleVerifier [0x00007FF7DA598B1D+3217341]<br>&nbsp; &nbsp; &nbsp; &nbsp;GetHandleVerifier [0x00007FF7DA5E5AE3+3532675]<br>&nbsp; &nbsp; &nbsp; &nbsp;GetHandleVerifier [0x00007FF7DA5DB0E0+3489152]<br>&nbsp; &nbsp; &nbsp; &nbsp;GetHandleVerifier [0x00007FF7DA33E776+750614]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA21375F]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA20EB14]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA20ECA2]<br>&nbsp; &nbsp; &nbsp; &nbsp;(No symbol) [0x00007FF7DA1FE16F]<br>&nbsp; &nbsp; &nbsp; &nbsp;BaseThreadInitThunk [0x00007FFCC8FB7374+20]<br>&nbsp; &nbsp; &nbsp; &nbsp;RtlUserThreadStart [0x00007FFCC911CC91+33]<br>). See below for more details.</pre>
+                        <pre>stepdefinitions.ReserveStepsDefinitions.theUserAccessInThePlatform(ReserveStepsDefinitions.java :38)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
 
                         </table>
                     </td>
                 <tr>
-                <tr class="test-PENDING">
+                <tr class="test-SKIPPED">
                     <td width="50" class="step-icon">
-                        <a name="0-1"/>
-                            <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a></span>
+                        <a name="1"/>
+                            <span style="margin-left: 20px; margin-right: 5px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a></span>
                     </td>
                     <td>
                         <div class="step-description">
-                                <span class="nested-group-step">
-                                When the user enter the information"Medellín""19 julio 2024""26 julio 2024"
+                                <span class="top-level-step">
+                                When the user enter the information<br><table class='embedded'><thead><th>city</th><th>dateinit</th><th>datefinal</th></thead><tbody><tr><td>Medellín</td><td>19 julio 2024</td><td>26 julio 2024</td></tr></tbody></table>
                             </span>
                             <span class="evidence">
                             </span>
                         </div>
                     </td>
-                        <td width="160" class="PENDING-text">
-
-                        </td>
-                    <td width="100"><span class="nested-group-step">PENDING</span></td>
-                    <td width="100"><span class="nested-group-step">0.01s</span></td>
+                    <td width="100"><span class="top-level-step">SKIPPED</span></td>
+                    <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
-                <tr class="test-IGNORED">
+                <tr class="test-SKIPPED">
                     <td width="50" class="step-icon">
-                        <a name="0-2"/>
-                            <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></a></span>
+                        <a name="2"/>
+                            <span style="margin-left: 20px; margin-right: 5px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a></span>
                     </td>
                     <td>
                         <div class="step-description">
-                                <span class="nested-group-step">
+                                <span class="top-level-step">
                                 Then user look the hotel reserve in the page
                             </span>
                             <span class="evidence">
                             </span>
                         </div>
                     </td>
-                        <td width="160" class="IGNORED-text">
-
-                        </td>
-                    <td width="100"><span class="nested-group-step">IGNORED</span></td>
-                    <td width="100"><span class="nested-group-step">0s</span></td>
+                    <td width="100"><span class="top-level-step">SKIPPED</span></td>
+                    <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
-
-                        </table>
-                    </td>
-                <tr>
-                <tr class="test-PENDING">
-                        <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>PENDING</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>11.94s</em></span></td>
+                <tr class="test-ERROR">
+                        <td colspan="2"></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>5.8s</em></span></td>
                 </tr>
 
             </table>

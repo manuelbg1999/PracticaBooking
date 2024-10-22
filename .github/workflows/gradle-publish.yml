@@ -14,22 +14,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-     # 2. Instala Google Chrome y ChromeDriver
+    # 2. Instala Google Chrome y ChromeDriver
       - name: Install Chrome and ChromeDriver
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-          # Versión de Google Chrome instalada
+          # Obtener la versión de Google Chrome
           CHROME_VERSION=$(google-chrome --version | grep -o '[0-9]*\.[0-9]*\.[0-9]*')
           echo "Chrome version: $CHROME_VERSION"
 
           # Obtener la versión principal de Chrome
           CHROME_MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d '.' -f 1)
+          echo "Chrome major version: $CHROME_MAJOR_VERSION"
 
           # Descargar la versión correspondiente de ChromeDriver
           CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR_VERSION")
+
+          # Imprimir la versión de ChromeDriver obtenida
           echo "ChromeDriver version: $CHROMEDRIVER_VERSION"
+
+          # Comprobar si la versión es válida
+          if [ -z "$CHROMEDRIVER_VERSION" ]; then
+            echo "Error: No se pudo obtener la versión de ChromeDriver."
+            exit 1
+          fi
 
           # Descargar y descomprimir ChromeDriver
           wget https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip

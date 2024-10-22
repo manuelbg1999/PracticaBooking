@@ -1,9 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
 # This workflow will build a package using Gradle and then publish it to GitHub packages when a push to the master branch is made
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
 
 name: Gradle Package
 
@@ -25,21 +20,19 @@ jobs:
     - name: Set up JDK 8
       uses: actions/setup-java@v4
       with:
-        java-version: '8'  # Change to Java 8
+        java-version: '8'  # Use Java 8
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v2  # Use the latest version
+      uses: gradle/actions/setup-gradle@v1  # Use a stable version of the Gradle action
       with:
         gradle-version: '8.8'  # Set Gradle to version 8.8
 
     - name: Build with Gradle
       run: ./gradlew build
 
-    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
-    # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       run: ./gradlew publish
       env:

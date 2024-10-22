@@ -1,4 +1,4 @@
-\name: Gradle Build and Publish
+name: Gradle Build and Publish
 
 on:
   push:

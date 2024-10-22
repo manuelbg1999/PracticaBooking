@@ -26,9 +26,12 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v1  # Use a stable version of the Gradle action
+      uses: gradle/gradle-build-action@v2  # Acción correcta para configurar Gradle
       with:
-        gradle-version: '8.8'  # Set Gradle to version 8.8
+        gradle-version: '8.8'  # Especificar la versión de Gradle 8.8
+
+    - name: Give gradlew execute permission
+      run: chmod +x ./gradlew
 
     - name: Build with Gradle
       run: ./gradlew build

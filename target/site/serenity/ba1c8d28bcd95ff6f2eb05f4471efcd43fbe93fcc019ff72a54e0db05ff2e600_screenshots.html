@@ -132,7 +132,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 19-07-2024 11:01</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-10-2024 15:28</span>
     <br style="clear:left"/>
 </div>
 
@@ -167,9 +167,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="pending-color">User reserve in the platform
+                                <span class="error-color">User reserve in the platform
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -183,19 +183,72 @@
 
     <div class="clr"></div>
 
-    <div class="story-title">
-        <h3>Scenario:</h3>
-        <div class="scenario">Given the user access in the platform<br>When the user enter the information"&lt;city&gt;""&lt;dateinit&gt;""&lt;datefinal&gt;"<br>Then user look the hotel reserve in the page</div>
-    </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Timeout exception: Expected condition failed: waiting for visibility of By.xpath: /html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button (tried for 180 second(s) with 500 milliseconds interval)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.TimeoutException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>interactions.WaitElement.performAs(WaitElement.java:26)<br />task.TaskEnterInformation.performAs(TaskEnterInformation.java:74)<br />stepdefinitions.ReserveStepsDefinitions.theUserEnterTheInformation(ReserveStepsDefinitions.java:51)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.NoSuchElementException
+                    </h4>
+                    <div>
+                            <pre>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button&quot;}<br>  (Session info: chrome=129.0.6668.101)<br>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br>Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'<br>System info: host: 'QV-4153', ip: '192.168.1.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'<br>Driver info: org.openqa.selenium.chrome.ChromeDriver<br>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\MANUEL~2\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63829}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br>Session ID: 619f7db50f28e3fc2b722569eea55146<br>*** Element info: {Using=xpath, value=/html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button}</pre>
+                        <pre>interactions.WaitElement.performAs(WaitElement.java :26)<br />task.TaskEnterInformation.performAs(TaskEnterInformation.java :74)<br />stepdefinitions.ReserveStepsDefinitions.theUserEnterTheInformation(ReserveStepsDefinitions.java :51)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource6652266101699065616.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png" title=" Example: {city=Medell&iacute;n, dateinit=19 julio 2024, datefinal=26 julio 2024}" width="1920"/>
-                <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png" title=" Given the user access in the platform" width="1920"/>
-                <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png" title=" User opens the https://www.booking.com/index.es.html" width="1920"/>
-                <img src="2d4441c3834d540af7ade36e769701da1bbf8a995b5806596d80ff3e07d72ff7.png" title=" Given the user access in the platform (completed): <span class='pending-color'>PENDING</span>" width="1920"/>
+                <img src="5777b34461d7337f965b6ef371f989d9ecf8c67e3844172c5ba0f27d249287fc.png" title=" Given the user access in the platform" width="1920"/>
+                <img src="5777b34461d7337f965b6ef371f989d9ecf8c67e3844172c5ba0f27d249287fc.png" title=" User opens the https://www.booking.com/index.es.html" width="1920"/>
+                <img src="5777b34461d7337f965b6ef371f989d9ecf8c67e3844172c5ba0f27d249287fc.png" title=" Given the user access in the platform (completed)" width="1920"/>
+                <img src="2a9a96b7e4f5255f03cdd42ac510a56a27a1a9571786c51d08adb2f873c29f58.png" title=" When the user enter the information
+| city | dateinit | datefinal |
+| Medell&iacute;n | 21 octubre 2024 | 26 octubre 2024 |" width="1920"/>
+                <img src="2a9a96b7e4f5255f03cdd42ac510a56a27a1a9571786c51d08adb2f873c29f58.png" title=" User task enter information" width="1920"/>
+                <img src="2a9a96b7e4f5255f03cdd42ac510a56a27a1a9571786c51d08adb2f873c29f58.png" title=" User waits the Button Close until be Visible" width="1920"/>
+                <img src="9ad9d70cdedef04a89d3ceb3e93770684f7c3de533cce446a4ed36d8ae58c6ac.png" title=" User clicks on Button Close" width="1920"/>
+                <img src="3aea9f3daca5b2aab6c669a4722c96eec90a8c6ac8e086b3132330128e669225.png" title=" User enters 'Medell&iacute;n' into City" width="1920"/>
+                <img src="a5dbc8ea90f9745c8ea4a1145507d00a68601cc7d6d73a600dd2640a08607ac4.png" title=" User enters ARROW_DOWN into City" width="1920"/>
+                <img src="f081850c58cec96216ba1d4529b1b0db076d0c1b6ecba455ab7f4d09625c7cbd.png" title=" User enters ENTER into City" width="1920"/>
+                <img src="c2da00b77093ddaed51212f3e09d5f82d85dd2351aa5850b62a8c2d3653c70bf.png" title=" User clicks on 21 octubre 2024 Date init" width="1920"/>
+                <img src="e4272a3583b0b94c3914993bfa23dbc35276bf8919c4c85560f79b523b861b89.png" title=" User clicks on 26 octubre 2024 Date final" width="1920"/>
+                <img src="e4272a3583b0b94c3914993bfa23dbc35276bf8919c4c85560f79b523b861b89.png" title=" User waits the Button Person until be Visible: <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

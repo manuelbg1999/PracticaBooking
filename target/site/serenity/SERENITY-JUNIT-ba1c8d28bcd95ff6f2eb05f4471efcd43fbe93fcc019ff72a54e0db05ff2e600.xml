@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Reserve in the booking.com" skipped="0" tests="1" time="5.8" timestamp="2024-10-21 03:19:03"><testcase name="User reserve in the platform"><error message="Could not instantiate class org.openqa.selenium.chrome.ChromeDriver" type="net.thucydides.core.webdriver.DriverConfigurationError">Could not instantiate class org.openqa.selenium.chrome.ChromeDriver</error><system-err>Could not instantiate class org.openqa.selenium.chrome.ChromeDriver&#13;
-stepdefinitions.ReserveStepsDefinitions.theUserAccessInThePlatform(ReserveStepsDefinitions.java:38)&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Reserve in the booking.com" skipped="0" tests="1" time="214.05" timestamp="2024-10-21 03:28:37"><testcase name="User reserve in the platform"><error message="Expected condition failed: waiting for visibility of By.xpath: /html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button (tried for 180 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for visibility of By.xpath: /html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button (tried for 180 second(s) with 500 milliseconds interval)</error><system-err>Expected condition failed: waiting for visibility of By.xpath: /html/body/div[3]/div[2]/div/form/div[1]/div[3]/div/button (tried for 180 second(s) with 500 milliseconds interval)&#13;
+interactions.WaitElement.performAs(WaitElement.java:26)&#13;
+task.TaskEnterInformation.performAs(TaskEnterInformation.java:74)&#13;
+stepdefinitions.ReserveStepsDefinitions.theUserEnterTheInformation(ReserveStepsDefinitions.java:51)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;

@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-    # 2. Instala Google Chrome y ChromeDriver
+         # 2. Instala Google Chrome y ChromeDriver
       - name: Install Chrome and ChromeDriver
         run: |
           sudo apt-get update
@@ -28,23 +28,18 @@ jobs:
           CHROME_MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d '.' -f 1)
           echo "Chrome major version: $CHROME_MAJOR_VERSION"
 
-          # Descargar la versión correspondiente de ChromeDriver
-          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR_VERSION")
+          # Asignar manualmente la versión de ChromeDriver
+          CHROMEDRIVER_VERSION="130.0.6723.63"  # Cambia a la versión específica de ChromeDriver
 
-          # Imprimir la versión de ChromeDriver obtenida
+          # Imprimir la versión de ChromeDriver
           echo "ChromeDriver version: $CHROMEDRIVER_VERSION"
-
-          # Comprobar si la versión es válida
-          if [ -z "$CHROMEDRIVER_VERSION" ]; then
-            echo "Error: No se pudo obtener la versión de ChromeDriver."
-            exit 1
-          fi
 
           # Descargar y descomprimir ChromeDriver
           wget https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/chromedriver
+
 
       # 3. Configura JDK 8
       - name: Set up JDK 8

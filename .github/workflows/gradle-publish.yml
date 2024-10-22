@@ -37,8 +37,8 @@ jobs:
           # Descargar y descomprimir ChromeDriver
           wget https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.58/linux64/chromedriver-linux64.zip
           unzip chromedriver-linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
+          sudo mv chromedriver.exe /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver.exe
 
 
       # 3. Configura JDK 8

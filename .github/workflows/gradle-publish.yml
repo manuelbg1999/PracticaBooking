@@ -1,43 +1,72 @@
-# This workflow will build a package using Gradle and then publish it to GitHub packages when a push to the master branch is made
-
-name: Gradle Package
+name: Gradle Build and Publish
 
 on:
   push:
     branches:
-      - master  # Trigger the workflow on push to master branch
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 8
-      uses: actions/setup-java@v4
-      with:
-        java-version: '8'  # Use Java 8
-        distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
+      # 1. Clona el repositorio
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v2  # Acción correcta para configurar Gradle
-      with:
-        gradle-version: '8.8'  # Especificar la versión de Gradle 8.8
+      # 2. Instala Google Chrome y ChromeDriver
+      - name: Install Chrome and ChromeDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
 
-    - name: Give gradlew execute permission
-      run: chmod +x ./gradlew
+          # Obtener la versión de Google Chrome
+          CHROME_VERSION=$(google-chrome --version | grep -o '[0-9]*\.[0-9]*\.[0-9]*')
+          echo "Chrome version: $CHROME_VERSION"
 
-    - name: Build with Gradle
-      run: ./gradlew build
+          # Obtener la versión principal de Chrome
+          CHROME_MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d '.' -f 1)
+          echo "Chrome major version: $CHROME_MAJOR_VERSION"
 
-    - name: Publish to GitHub Packages
-      run: ./gradlew publish
-      env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Asignar manualmente la versión de ChromeDriver
+          CHROMEDRIVER_VERSION="130.0.6723.63"  # Cambia a la versión específica de ChromeDriver
+
+          # Imprimir la versión de ChromeDriver
+          echo "ChromeDriver version: $CHROMEDRIVER_VERSION"
+
+          # Descargar y descomprimir ChromeDriver
+          wget https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.58/linux64/chromedriver-linux64.zip
+          unzip chromedriver-linux64.zip
+
+          # Mover el archivo chromedriver a /usr/local/bin/ y darle permisos de ejecución
+          sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+
+
+      # 3. Configura JDK 8
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+
+      # 4. Configura Gradle
+      - name: Setup Gradle
+        uses: gradle/wrapper-validation-action@v1
+        with:
+          gradle-version: '8.8'
+
+      # 5. Asegura que gradlew tenga permisos de ejecución
+      - name: Give Gradlew Execution Permissions
+        run: chmod +x gradlew
+
+      # 6. Compila el proyecto con Gradle
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      # 7. Publica en GitHub Packages
+      - name: Publish to GitHub Packages
+        run: ./gradlew publish
+        env:
+          USERNAME: ${{ github.actor }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
